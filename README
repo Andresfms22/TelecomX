@@ -1,0 +1,107 @@
+Descripción del Proyecto
+Este proyecto forma parte del Challenge de Data Science de Alura LATAM.
+El objetivo es analizar los datos de clientes de Telecom X para identificar los factores que influyen en la evasión (Churn) y generar insights accionables que permitan reducir la pérdida de clientes.
+El análisis incluye:
+- Importación de datos desde una API
+- Limpieza y tratamiento del dataset
+- Análisis Exploratorio de Datos (EDA)
+- Identificación de variables clave
+- Conclusiones y recomendaciones estratégicas
+Todo el proceso se desarrolla en un notebook de Python, utilizando Pandas, Matplotlib y Seaborn.
+
+📂 Estructura del Proyecto
+📁 telecom-churn-analysis
+│
+├── README.md
+├── notebook.ipynb
+└── data/
+    └── TelecomX_Data.json
+
+
+
+🚀 Tecnologías Utilizadas
+- Python 3
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Google Colab / Jupyter Notebook
+
+📥 Instalación y Requisitos
+- Clona este repositorio:
+git clone https://github.com/tuusuario/telecom-churn-analysis.git
+
+
+- Instala las dependencias necesarias:
+pip install pandas numpy matplotlib seaborn
+
+
+- Abre el notebook:
+jupyter notebook notebook.ipynb
+
+
+
+🔄 Carga de Datos
+Los datos se obtienen directamente desde la API del desafío:
+url = "https://raw.githubusercontent.com/ingridcristh/challenge2-data-science-LATAM/main/TelecomX_Data.json"
+df = pd.read_json(url)
+
+
+
+🧼 Limpieza y Tratamiento de Datos
+El dataset fue procesado mediante:
+- Eliminación de duplicados
+- Conversión de tipos de datos
+- Limpieza de valores inconsistentes
+- Estandarización de categorías
+- Eliminación de registros con Churn nulo
+- Conversión de Churn a variable binaria
+El dataset final contiene 7043 registros limpios.
+
+📊 Análisis Exploratorio de Datos (EDA)
+El EDA se divide en tres partes:
+🔹 Análisis Numérico
+- Distribución de tenure
+- Cargos mensuales y totales
+- Comparación entre clientes que abandonaron y los que permanecen
+🔹 Análisis Categórico
+- Tipo de contrato
+- Tipo de servicio de Internet
+- Método de pago
+- Servicios adicionales
+- SeniorCitizen, Partner, Dependents
+🔹 Análisis Combinado
+- Tenure + Contract
+- MonthlyCharges + InternetService
+- PaymentMethod + MonthlyCharges
+- OnlineSecurity + Tenure
+Incluye visualizaciones como:
+- Countplots
+- Boxplots
+- Histogramas
+- Heatmaps
+
+🧠 Conclusiones e Insights
+Los factores más influyentes en el churn son:
+- Tipo de contrato (Month-to-month = churn alto)
+- Tenure bajo (clientes nuevos abandonan más)
+- Cargos mensuales altos
+- Servicio de Internet Fiber Optic
+- Ausencia de servicios adicionales (OnlineSecurity, TechSupport)
+- Método de pago Electronic Check
+- Adultos mayores (SeniorCitizen)
+
+🎯 Recomendaciones Estratégicas
+- Mejorar la experiencia inicial del cliente
+- Incentivar contratos de mayor duración
+- Revisar la calidad del servicio de fibra óptica
+- Promover servicios adicionales de seguridad y soporte
+- Incentivar métodos de pago automáticos
+- Ofrecer soporte especializado para adultos mayores
+
+🧾 Autor
+Andrés Felipe Mejía Sánchez
+Designer & Data Analyst
+Bogotá, Colombia
+
+
